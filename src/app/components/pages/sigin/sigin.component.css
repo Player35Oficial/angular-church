@@ -1,0 +1,22 @@
+h1 {
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+.centralized-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centralized-container a {
+  text-decoration: none;
+  color: #e95fec;
+  transition: 0.2s;
+}
+
+.centralized-container a:hover {
+  color: #80ec5f;
+}

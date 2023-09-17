@@ -1,0 +1,52 @@
+h1 {
+  font-weight: 400;
+  font-size: 2.8rem;
+  margin: auto;
+  text-align: center;
+}
+
+.align-right-container {
+  display: flex;
+  width: 100%;
+}
+
+.align-right-container h1 {
+  /* width: 50%; */
+  flex: 1;
+}
+
+.align-right-container .form-container {
+  max-width: 50%;
+  flex: 1;
+  margin: 0;
+  height: 100vh;
+  padding: 6.4rem 12.4rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container p {
+  margin-top: 2.4rem;
+}
+
+.form-container p a {
+  text-decoration: none;
+  color: #05b575;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.form-container p a:hover {
+  color: #94ec5f;
+}
+
+.form-group select {
+  padding: 1rem 1.6rem;
+  border-radius: 0.4rem;
+  border-style: none;
+  transition: all 0.2s ease;
+}

@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #3a7ca5;
+  --secondary: #2f6690;
+  --primary-dark: #16425b;
+  --white-primary: #d9dcd6;
+  --light-primary: #81c3d7;
+  --dark-home-bg: #272727;
+  --card-bg: #2e2e2e;
+  --dark-icon-color: #2d2d2d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--dark-home-bg);
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.form-container {
+  max-width: 46rem;
+  width: 100%;
+  background-color: var(--primary);
+  padding: 3.2rem;
+  border-radius: 0.4rem;
+  align-items: center;
+  margin-top: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group input {
+  padding: 1rem 1.6rem;
+  border-radius: 0.4rem;
+  border-style: none;
+  outline-style: none;
+}
+
+.form-container form input[type="submit"] {
+  margin-top: 1.6rem;
+  background-color: var(--primary-dark);
+  color: #fff;
+  padding: 0.8rem 4rem;
+  width: min-content;
+  border-style: none;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+}
+
+.form-container form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--secondary);
+}
