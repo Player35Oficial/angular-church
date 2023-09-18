@@ -5,6 +5,7 @@ import { SigupComponent } from './components/pages/sigup/sigup.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AllComponent } from './components/pages/transaction/all/all.component';
 import { ViewTransactionComponent } from './components/pages/transaction/view-transaction/view-transaction.component';
+import { DepositComponent } from './components/pages/transaction/deposit/deposit.component';
 
 const routes: Routes = [
   {
@@ -24,8 +25,12 @@ const routes: Routes = [
     component: AllComponent,
   },
   {
-    path: 'transaction/:id',
+    path: 'transaction/view/:id',
     component: ViewTransactionComponent,
+  },
+  {
+    path: 'transaction/deposit',
+    component: DepositComponent,
   },
 ];
 
