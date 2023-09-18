@@ -1,0 +1,55 @@
+h2 {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  align-items: center;
+  font-weight: 500;
+}
+
+.container {
+  gap: 0;
+}
+
+h2 fa-icon {
+  position: relative;
+  color: var(--primary);
+  font-size: 3.8rem;
+}
+
+h2 fa-icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  background-color: #fff;
+  right: -6px;
+  top: 3px;
+  z-index: -1;
+  border-radius: 0.4rem;
+}
+
+.main h3 {
+  background-color: var(--primary-dark);
+  padding: 1.4rem 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.main section {
+  background-color: var(--white-primary);
+  color: black;
+  padding: 1.6rem;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.main section p > span {
+  font-weight: 600;
+}
+
+.main section p {
+  display: flex;
+  width: 15rem;
+  justify-content: space-between;
+}

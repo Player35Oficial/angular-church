@@ -8,6 +8,7 @@ import { SigupComponent } from './components/pages/sigup/sigup.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AllComponent } from './components/pages/transaction/all/all.component';
+import { ViewTransactionComponent } from './components/pages/transaction/view-transaction/view-transaction.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AllComponent } from './components/pages/transaction/all/all.component';
     SiginComponent,
     SigupComponent,
     HomeComponent,
-    AllComponent
+    AllComponent,
+    ViewTransactionComponent
   ],
   imports: [
     BrowserModule,
