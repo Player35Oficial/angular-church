@@ -7,13 +7,15 @@ import { SiginComponent } from './components/pages/sigin/sigin.component';
 import { SigupComponent } from './components/pages/sigup/sigup.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AllComponent } from './components/pages/transaction/all/all.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SiginComponent,
     SigupComponent,
-    HomeComponent
+    HomeComponent,
+    AllComponent
   ],
   imports: [
     BrowserModule,
