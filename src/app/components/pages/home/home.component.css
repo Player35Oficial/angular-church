@@ -1,0 +1,58 @@
+h2 {
+  text-align: center;
+  margin: 3.2rem 0;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.actions-container .actions-slider {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.action-container-item {
+  height: 16.4rem;
+  width: 32rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+}
+
+.action-container-item .action-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem 0.4rem 0 0;
+  flex: 1;
+  background: #ebebeb;
+}
+
+.action-container-item .action-label {
+  padding: 2rem 3.9rem;
+  font-size: 1.6rem;
+  width: 320px;
+  text-align: center;
+}
+
+fa-icon {
+  font-size: 6.4rem;
+  color: var(--primary);
+}

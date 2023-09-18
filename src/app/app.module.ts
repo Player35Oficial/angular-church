@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SiginComponent } from './components/pages/sigin/sigin.component';
 import { SigupComponent } from './components/pages/sigup/sigup.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './components/pages/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
