@@ -11,6 +11,7 @@ import { AllComponent } from './components/pages/transaction/all/all.component';
 import { ViewTransactionComponent } from './components/pages/transaction/view-transaction/view-transaction.component';
 import { DepositComponent } from './components/pages/transaction/deposit/deposit.component';
 import { EditTransactionComponent } from './components/pages/transaction/edit-transaction/edit-transaction.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditTransactionComponent } from './components/pages/transaction/edit-tr
     AllComponent,
     ViewTransactionComponent,
     DepositComponent,
-    EditTransactionComponent
+    EditTransactionComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

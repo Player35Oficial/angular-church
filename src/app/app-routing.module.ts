@@ -30,7 +30,7 @@ const routes: Routes = [
     component: ViewTransactionComponent,
   },
   {
-    path: 'transaction/deposit',
+    path: 'transaction/deposit/:transactionType',
     component: DepositComponent,
   },
   {

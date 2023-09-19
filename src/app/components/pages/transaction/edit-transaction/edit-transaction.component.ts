@@ -1,5 +1,9 @@
-import { faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowCircleLeft,
+  faHandHoldingDollar,
+} from '@fortawesome/free-solid-svg-icons';
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit-transaction',
@@ -8,4 +12,13 @@ import { Component } from '@angular/core';
 })
 export class EditTransactionComponent {
   faDollar = faHandHoldingDollar;
+
+  faArrowBack = faArrowCircleLeft;
+
+  transactionId!: string;
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe((params) => {
+      this.transactionId = params['id'];
+    });
+  }
 }

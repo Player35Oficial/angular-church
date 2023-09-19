@@ -1,3 +1,5 @@
+<header class="header"><h1>API REST - CHURCH</h1></header>
+
 <h2>Escolha uma ação:</h2>
 
 <div class="container">
@@ -8,9 +10,9 @@
         <div class="action-icon">
           <fa-icon [icon]="faInvoice"></fa-icon>
         </div>
-        <div class="action-label">
-          <p>Consultar todas as operações</p>
-        </div>
+        <a routerLink="/transaction/all" class="action-label"
+          >Consultar todas as operações</a
+        >
       </div>
     </div>
   </div>
@@ -22,17 +24,17 @@
         <div class="action-icon">
           <fa-icon [icon]="faHoldingDollar"></fa-icon>
         </div>
-        <div class="action-label">
-          <p>Dízimo</p>
-        </div>
+        <a routerLink="/transaction/deposit/dizimo" class="action-label"
+          >Dízimo</a
+        >
       </div>
       <div class="action-container-item">
         <div class="action-icon">
           <fa-icon [icon]="faHoldingHeart"></fa-icon>
         </div>
-        <div class="action-label">
-          <p>Oferta</p>
-        </div>
+        <a routerLink="/transaction/deposit/oferta" class="action-label"
+          >Oferta</a
+        >
       </div>
     </div>
   </div>

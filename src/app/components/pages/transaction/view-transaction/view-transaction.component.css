@@ -1,32 +1,5 @@
-h2 {
-  display: flex;
-  justify-content: center;
-  gap: 1.6rem;
-  align-items: center;
-  font-weight: 500;
-}
-
 .container {
   gap: 0;
-}
-
-h2 fa-icon {
-  position: relative;
-  color: var(--primary);
-  font-size: 3.8rem;
-}
-
-h2 fa-icon::before {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 5rem;
-  width: 5rem;
-  background-color: #fff;
-  right: -6px;
-  top: 3px;
-  z-index: -1;
-  border-radius: 0.4rem;
 }
 
 .main h3 {
@@ -52,4 +25,19 @@ h2 fa-icon::before {
   display: flex;
   width: 15rem;
   justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 1.2rem 0;
+  gap: 1.6rem;
+}
+
+.actions .btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,66 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 4.8rem;
+}
+
+nav .nav-button {
+  position: absolute;
+  left: 3.2rem;
+  background-color: var(--white-primary);
+  border-radius: 2.4rem 2.4rem 0.4rem 2.4rem;
+  padding-right: 8px;
+  transition: 0.3s;
+}
+
+nav .nav-button:hover {
+  background-color: var(--secondary);
+}
+
+nav .nav-button:hover a,
+nav .nav-button:hover fa-icon {
+  color: #fff;
+}
+
+nav .nav-button a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2.4rem;
+  color: #000;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+nav .nav-button fa-icon {
+  display: flex;
+  font-size: 4.8rem;
+  color: var(--primary-dark);
+  transition: 0.4s;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+h2 fa-icon {
+  position: relative;
+  color: var(--primary);
+  font-size: 3.8rem;
+}
+
+h2 .icon-container {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: #fff;
+  top: 3px;
+  z-index: -1;
+  border-radius: 0.4rem;
+}

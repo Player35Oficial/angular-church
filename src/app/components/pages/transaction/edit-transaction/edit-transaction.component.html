@@ -1,6 +1,11 @@
-<nav>
-  <h2><fa-icon [icon]="faDollar"></fa-icon> Edição</h2>
-</nav>
+<header class="header"><h1>API REST - CHURCH</h1></header>
+
+<app-navigation
+  title="Editando Registro: # {{ transactionId }}"
+  [iconTitle]="faDollar"
+  [iconNavigateBack]="faArrowBack"
+  labelNavigateBack="Voltar"
+></app-navigation>
 
 <main class="main container">
   <h3>Dízimo</h3>

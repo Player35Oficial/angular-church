@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { faFileInvoiceDollar } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import {
+  faArrowAltCircleLeft,
+  faFileInvoiceDollar,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-all',
@@ -8,4 +12,5 @@ import { faFileInvoiceDollar } from '@fortawesome/free-solid-svg-icons';
 })
 export class AllComponent {
   faInvoice = faFileInvoiceDollar;
+  faArrowBack = faArrowAltCircleLeft;
 }

@@ -1,6 +1,11 @@
-<nav>
-  <h2><fa-icon [icon]="faInvoice"></fa-icon> Consultando Transações</h2>
-</nav>
+<header class="header"><h1>API REST - CHURCH</h1></header>
+
+<app-navigation
+  [title]="'Consultando Transações'"
+  [iconTitle]="faInvoice"
+  [iconNavigateBack]="faArrowBack"
+  labelNavigateBack="Voltar"
+></app-navigation>
 
 <div class="container">
   <table>
@@ -15,14 +20,16 @@
       <tr>
         <td>Dízimo</td>
         <td>
-          R$ 150,00 <button><a href="">Ver Detalhes</a></button>
+          R$ 150,00
+          <button><a routerLink="/transaction/view/1">Ver Detalhes</a></button>
         </td>
         <td>25/12/2023</td>
       </tr>
       <tr>
         <td>Dízimo</td>
         <td>
-          R$ 150,00 <button><a href="">Ver Detalhes</a></button>
+          R$ 150,00
+          <button><a routerLink="/transaction/view/2">Ver Detalhes</a></button>
         </td>
         <td>25/12/2023</td>
       </tr>

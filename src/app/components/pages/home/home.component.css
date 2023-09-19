@@ -1,6 +1,6 @@
 h2 {
   text-align: center;
-  margin: 3.2rem 0;
+  margin: 3.2rem 0 0 0;
 }
 
 h2,
@@ -46,10 +46,18 @@ h3 {
 }
 
 .action-container-item .action-label {
+  display: flex;
   padding: 2rem 3.9rem;
   font-size: 1.6rem;
   width: 320px;
   text-align: center;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  justify-content: center;
+}
+
+.action-container-item .action-label:hover {
+  background-color: var(--primary-dark);
 }
 
 fa-icon {
