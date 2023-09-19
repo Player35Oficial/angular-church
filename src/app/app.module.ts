@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AllComponent } from './components/pages/transaction/all/all.component';
 import { ViewTransactionComponent } from './components/pages/transaction/view-transaction/view-transaction.component';
 import { DepositComponent } from './components/pages/transaction/deposit/deposit.component';
+import { EditTransactionComponent } from './components/pages/transaction/edit-transaction/edit-transaction.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DepositComponent } from './components/pages/transaction/deposit/deposit
     HomeComponent,
     AllComponent,
     ViewTransactionComponent,
-    DepositComponent
+    DepositComponent,
+    EditTransactionComponent
   ],
   imports: [
     BrowserModule,

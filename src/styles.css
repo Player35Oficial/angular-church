@@ -160,3 +160,27 @@ table tbody tr {
 table tbody tr:hover {
   background-color: #4ba1b9;
 }
+
+/* BUTTONS */
+.btn {
+  border-radius: var(--round-4, 4px);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  border-style: none;
+  width: 24rem;
+  transition: 0.3s;
+}
+
+.btn.btn-edit {
+  background: var(--secondary);
+}
+
+.btn.btn-back {
+  background: #686868;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+}
