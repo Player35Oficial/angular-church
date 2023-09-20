@@ -3,7 +3,7 @@
 
   <div class="form-container">
     <h2>Fazer Login</h2>
-    <form action="">
+    <form (ngSubmit)="submit()" [formGroup]="loginForm" #formDir="ngForm">
       <div class="form-group">
         <label for="email">Email:</label>
         <input
@@ -11,7 +11,16 @@
           name="email"
           id="email"
           placeholder="email@email.com"
+          formControlName="email"
+          autocomplete="email"
+          required
         />
+        <div
+          *ngIf="email.invalid && formDir.submitted"
+          class="validation-error"
+        >
+          <p *ngIf="email.errors?.['required']">O email é obrigatório</p>
+        </div>
       </div>
       <div class="form-group">
         <label for="password">Senha:</label>
@@ -20,7 +29,15 @@
           name="password"
           id="password"
           placeholder="password"
+          required
+          formControlName="password"
         />
+        <div
+          *ngIf="password.invalid && formDir.submitted"
+          class="validation-error"
+        >
+          <p *ngIf="password.errors?.['required']">A senha é obrigatória</p>
+        </div>
       </div>
       <input type="submit" value="Entrar" />
     </form>

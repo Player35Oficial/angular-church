@@ -21,6 +21,7 @@ h1 {
   margin: 0;
   height: 100vh;
   padding: 6.4rem 12.4rem;
+  justify-content: center;
 }
 
 .form-container {

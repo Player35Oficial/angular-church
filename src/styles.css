@@ -197,3 +197,12 @@ table tbody tr:hover {
   cursor: pointer;
   background-color: var(--primary);
 }
+
+/* validation errors */
+.validation-error p {
+  color: #df3737;
+  margin-top: 0.8rem;
+  border-left: 0.3rem solid #df3737;
+  padding-left: 0.4rem;
+  background-color: #cda7a75c;
+}
