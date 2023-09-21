@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { ChurchApiService } from 'src/app/services/church-api.service';
 
 @Component({
   selector: 'app-sigin',
@@ -8,6 +10,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SiginComponent {
   loginForm!: FormGroup;
+
+  constructor(
+    private churchApiService: ChurchApiService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -28,7 +35,22 @@ export class SiginComponent {
     if (this.loginForm.invalid) {
       return;
     }
-    console.log(this.loginForm.value);
-    console.log('enviou formulário');
+    const { email, password } = this.loginForm.value;
+
+    this.churchApiService.login(email, password).subscribe((response) => {
+      if (response && response.accessToken) {
+        const accessToken = response.accessToken;
+        this.authService.setAccessToken(accessToken);
+        console.log('Token armazenado: ', this.authService.getAcessToken());
+        console.log(
+          'token decodificado:',
+          this.authService.decodeAccessToken()
+        );
+      } else {
+        console.error(response.body.errors);
+      }
+      console.log(this.loginForm.value);
+      console.log('enviou formulário');
+    });
   }
 }

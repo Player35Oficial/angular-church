@@ -14,6 +14,7 @@ import { ViewTransactionComponent } from './components/pages/transaction/view-tr
 import { DepositComponent } from './components/pages/transaction/deposit/deposit.component';
 import { EditTransactionComponent } from './components/pages/transaction/edit-transaction/edit-transaction.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,14 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('access_token');
+        },
+        allowedDomains: ['http://localhost:3333'],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
