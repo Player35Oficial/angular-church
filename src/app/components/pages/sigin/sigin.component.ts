@@ -41,11 +41,6 @@ export class SiginComponent {
       if (response && response.accessToken) {
         const accessToken = response.accessToken;
         this.authService.setAccessToken(accessToken);
-        console.log('Token armazenado: ', this.authService.getAcessToken());
-        console.log(
-          'token decodificado:',
-          this.authService.decodeAccessToken()
-        );
       } else {
         console.error(response.body.errors);
       }

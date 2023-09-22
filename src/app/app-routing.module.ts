@@ -7,6 +7,8 @@ import { AllComponent } from './components/pages/transaction/all/all.component';
 import { ViewTransactionComponent } from './components/pages/transaction/view-transaction/view-transaction.component';
 import { DepositComponent } from './components/pages/transaction/deposit/deposit.component';
 import { EditTransactionComponent } from './components/pages/transaction/edit-transaction/edit-transaction.component';
+import { authGuard } from './guards/auth.guard';
+import { roleGuard } from './guards/role.guard';
 
 const routes: Routes = [
   {
@@ -20,6 +22,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'transaction/all',
@@ -36,6 +39,7 @@ const routes: Routes = [
   {
     path: 'transaction/edit/:id',
     component: EditTransactionComponent,
+    canActivate: [authGuard, roleGuard],
   },
 ];
 
