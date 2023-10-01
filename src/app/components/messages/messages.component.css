@@ -1,0 +1,55 @@
+.message {
+  position: fixed;
+  top: 3em;
+  right: 3%;
+  width: 25.6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  border-radius: 0.8rem;
+  animation: open 0.8s;
+}
+
+.message .message-header {
+  text-align: center;
+  padding: 0.8rem 0;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.message .message-content {
+  padding: 1.8rem 1.6rem;
+  text-align: center;
+}
+
+.Unauthorized,
+.Bad-Request,
+.status400 {
+  background-color: #902f2f;
+}
+
+.status500 {
+  background: linear-gradient(90deg, #16425b 0%, #902f2f 100%);
+}
+
+.status200 {
+  background: var(--Color-1, #2f6690);
+}
+
+.status201 {
+  background: #057a18;
+}
+
+.status204 {
+  background: #cd7003;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    right: 0.5%;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

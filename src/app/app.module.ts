@@ -15,6 +15,7 @@ import { DepositComponent } from './components/pages/transaction/deposit/deposit
 import { EditTransactionComponent } from './components/pages/transaction/edit-transaction/edit-transaction.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { JwtModule } from '@auth0/angular-jwt';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { JwtModule } from '@auth0/angular-jwt';
     DepositComponent,
     EditTransactionComponent,
     NavigationComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

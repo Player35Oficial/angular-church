@@ -1,0 +1,8 @@
+<div class="message" *ngIf="errorCode && errorTitle && errorMessage">
+  <div class="message-header status{{ errorCode }}">
+    <h4>{{ errorTitle }}</h4>
+  </div>
+  <div class="message-content">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>
