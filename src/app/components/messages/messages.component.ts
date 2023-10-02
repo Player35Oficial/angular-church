@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { MessagesService } from 'src/app/services/messages-service.service';
 
 @Component({
   selector: 'app-messages',
@@ -6,7 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./messages.component.css'],
 })
 export class MessagesComponent {
-  errorCode = '500';
-  errorTitle = 'Erro nosso :(';
-  errorMessage = 'Erro interno do Servidor';
+  message: any;
+  private subscription: Subscription;
+
+  constructor(public messagesService: MessagesService) {
+    this.subscription = this.messagesService.message$.subscribe((message) => {
+      this.message = message;
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }

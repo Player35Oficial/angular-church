@@ -52,7 +52,7 @@ import { EditPopupComponent } from './components/popups/edit-popup/edit-popup.co
       },
     }),
   ],
-  providers: [],
+  providers: [MessagesComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

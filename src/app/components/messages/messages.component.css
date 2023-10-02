@@ -23,7 +23,8 @@
 
 .Unauthorized,
 .Bad-Request,
-.status400 {
+.status400,
+.status401 {
   background-color: #902f2f;
 }
 

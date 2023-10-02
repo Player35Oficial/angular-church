@@ -11,7 +11,8 @@ export class UserRoleService {
     console.log(this.userRole);
   }
 
-  getUserRole(): string | null {
+  public getUserRole(): string | null {
+    console.log(this.userRole);
     return this.userRole;
   }
 }
