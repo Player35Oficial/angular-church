@@ -198,6 +198,11 @@ table tbody tr:hover {
   background-color: var(--primary);
 }
 
+.btn-green {
+  background-color: #2f903f;
+  color: #fff;
+}
+
 /* validation errors */
 .validation-error p {
   color: #df3737;

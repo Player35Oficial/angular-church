@@ -16,6 +16,9 @@ import { EditTransactionComponent } from './components/pages/transaction/edit-tr
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { MessagesComponent } from './components/messages/messages.component';
+import { DepositPopupComponent } from './components/popups/deposit-popup/deposit-popup.component';
+import { DeletePopupComponent } from './components/popups/delete-popup/delete-popup.component';
+import { EditPopupComponent } from './components/popups/edit-popup/edit-popup.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { MessagesComponent } from './components/messages/messages.component';
     EditTransactionComponent,
     NavigationComponent,
     MessagesComponent,
+    DepositPopupComponent,
+    DeletePopupComponent,
+    EditPopupComponent,
   ],
   imports: [
     BrowserModule,

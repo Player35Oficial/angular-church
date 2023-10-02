@@ -1,0 +1,23 @@
+<div class="popup-container" *ngIf="transactionType">
+  <div class="popup-header">
+    <h2>Confirmar Exclusão</h2>
+  </div>
+  <div class="popup-content">
+    <p>
+      Realizando: <span>{{ transactionType }}</span>
+    </p>
+    <p>
+      no valor de:
+      <span class="value">R$ {{ depositValue | number : "1.2-3" }}</span>
+    </p>
+  </div>
+  <div class="popup-advertence">
+    <p>
+      A seguinte ação não poderá ser revertida! Confirme antes de prosseguir!
+    </p>
+  </div>
+  <div class="popup-actions">
+    <button class="btn btn-back">Voltar</button>
+    <button class="btn btn-red">Excluir</button>
+  </div>
+</div>

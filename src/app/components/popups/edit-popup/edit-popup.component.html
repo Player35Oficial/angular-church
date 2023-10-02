@@ -1,0 +1,26 @@
+<div class="popup-container" *ngIf="transactionType">
+  <div class="popup-header">
+    <h2>Confirmar Alteração</h2>
+  </div>
+  <div class="popup-content">
+    <p>
+      Realizando: <span>{{ transactionType }}</span>
+    </p>
+    <p>de: R$ {{ value | number : "1.2-3" }}</p>
+    <form>
+      <input type="hidden" name="id_transaction" value="{{ id_transaction }}" />
+      <div class="form-group">
+        <label for="value">Para: </label>
+        <input
+          type="text"
+          name="value"
+          value="{{ value | number : '1.2-2' }}"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="popup-actions">
+    <button class="btn btn-back">Cancelar</button>
+    <button class="btn btn-green">Confirmar</button>
+  </div>
+</div>
