@@ -27,14 +27,17 @@ const routes: Routes = [
   {
     path: 'transaction/all',
     component: AllComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'transaction/view/:id',
     component: ViewTransactionComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'transaction/deposit/:transactionType',
     component: DepositComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'transaction/edit/:id',
