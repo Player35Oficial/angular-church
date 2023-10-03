@@ -17,21 +17,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Dízimo</td>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.id_tipos_transacao | titlecase }}</td>
         <td>
-          R$ 150,00
-          <button><a routerLink="/transaction/view/1">Ver Detalhes</a></button>
+          R$ {{ transaction.valor | number : "1.2" }}
+          <button>
+            <a
+              routerLink="/transaction/view/{{
+                transaction.id_tipos_transacao
+              }}/{{ transaction.id }}"
+              >Ver Detalhes</a
+            >
+          </button>
         </td>
-        <td>25/12/2023</td>
-      </tr>
-      <tr>
-        <td>Dízimo</td>
-        <td>
-          R$ 150,00
-          <button><a routerLink="/transaction/view/2">Ver Detalhes</a></button>
-        </td>
-        <td>25/12/2023</td>
+        <td>{{ transaction.data | date : "dd/MM/yy" }}</td>
       </tr>
     </tbody>
   </table>

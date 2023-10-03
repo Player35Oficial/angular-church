@@ -42,4 +42,33 @@ export class ChurchApiService {
       { headers }
     );
   }
+
+  getAllTransactions(): Observable<ITransactions[]> {
+    const url = `${this.baseApiUrl}/transacao/`;
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+
+    return this.http.get<ITransactions[]>(url, { headers });
+  }
+
+  getTransaction(
+    transactionType: string,
+    id: number
+  ): Observable<ITransactions> {
+    const url = `${this.baseApiUrl}/transacao/${transactionType}/${id}`;
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+
+    return this.http.get<ITransactions>(url, { headers });
+  }
+}
+
+export interface ITransactions {
+  id: number;
+  id_usuario: number;
+  id_tipos_transacao: string;
+  valor: number;
+  data: number;
 }

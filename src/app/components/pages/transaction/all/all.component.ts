@@ -4,6 +4,7 @@ import {
   faArrowAltCircleLeft,
   faFileInvoiceDollar,
 } from '@fortawesome/free-solid-svg-icons';
+import { ChurchApiService } from 'src/app/services/church-api.service';
 
 @Component({
   selector: 'app-all',
@@ -13,4 +14,23 @@ import {
 export class AllComponent {
   faInvoice = faFileInvoiceDollar;
   faArrowBack = faArrowAltCircleLeft;
+
+  transactions: ITransaction[] = [];
+
+  constructor(private apiService: ChurchApiService) {}
+
+  ngOnInit() {
+    this.apiService.getAllTransactions().subscribe((data) => {
+      data.forEach((item) => this.transactions.push(item));
+    });
+    console.log(this.transactions);
+  }
+}
+
+export interface ITransaction {
+  id: number;
+  id_usuario: number;
+  id_tipos_transacao: string;
+  valor: number;
+  data: number;
 }

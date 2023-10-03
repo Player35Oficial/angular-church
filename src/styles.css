@@ -193,6 +193,10 @@ table tbody tr:hover {
   background: #686868;
 }
 
+.btn.btn-red {
+  background-color: #902f2f;
+}
+
 .btn:hover {
   cursor: pointer;
   background-color: var(--primary);

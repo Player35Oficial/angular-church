@@ -30,7 +30,7 @@ const routes: Routes = [
     canActivate: [authGuard],
   },
   {
-    path: 'transaction/view/:id',
+    path: 'transaction/view/:transactionType/:id',
     component: ViewTransactionComponent,
     canActivate: [authGuard],
   },
