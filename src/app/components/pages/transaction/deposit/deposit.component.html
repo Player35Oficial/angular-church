@@ -13,10 +13,30 @@
     <p>
       Realizar: <span>{{ type | titlecase }}</span>
     </p>
-    <form action="">
+    <form (submit)="submit()" [formGroup]="depositForm" #formDir="ngForm">
+      <input
+        formControlName="type_transaction"
+        type="hidden"
+        name="type_transaction"
+        value="{{ type }}"
+        required
+      />
+      <input
+        formControlName="userId"
+        type="hidden"
+        name="userId"
+        value="{{ userId }}"
+        required
+      />
       <div class="form-group">
         <label for="value"><span>No valor de:</span></label>
-        <input type="number" name="value" placeholder="R$ 10,00" />
+        <input
+          formControlName="value"
+          type="number"
+          name="value"
+          placeholder="R$ 10,00"
+          required
+        />
       </div>
       <input type="submit" value="Enviar" />
     </form>

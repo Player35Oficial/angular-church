@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-deposit-popup',
@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./deposit-popup.component.css'],
 })
 export class DepositPopupComponent {
-  transactionType = '';
-  depositValue = 0.5;
+  transactionType: string = '';
+
+  depositValue: number = 0;
+
+  public setTransactionType(type_transaction: string) {
+    this.transactionType = type_transaction;
+  }
 }
