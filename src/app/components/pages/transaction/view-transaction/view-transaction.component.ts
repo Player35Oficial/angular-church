@@ -17,7 +17,7 @@ export class ViewTransactionComponent {
   faArrowBack = faArrowCircleLeft;
 
   isAdmin: boolean = true;
-
+  //
   userInSection: any;
   userRole: string = '';
 
