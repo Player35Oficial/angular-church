@@ -17,7 +17,12 @@
     <div *ngIf="isAdmin" class="actions">
       <button class="btn btn-red">Excluir</button>
       <button class="btn btn-edit">
-        <a routerLink="/transaction/edit/{{ transaction.id }}">Editar</a>
+        <a
+          routerLink="/transaction/edit/{{ transactionType }}/{{
+            transaction.id
+          }}"
+          >Editar</a
+        >
       </button>
     </div>
   </section>

@@ -25,7 +25,7 @@ export class ViewTransactionComponent {
   userInSection: any;
   userRole: string = '';
 
-  transaction!: ITransactions;
+  transaction: ITransactions | any = {} as ITransactions;
 
   transactionId!: string;
   transactionType!: string;

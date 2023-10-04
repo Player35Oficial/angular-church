@@ -2,7 +2,7 @@
   position: fixed;
   top: 3em;
   right: 3%;
-  width: 25.6rem;
+  min-width: 25.6rem;
   display: flex;
   flex-direction: column;
   background-color: var(--card-bg);

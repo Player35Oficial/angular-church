@@ -40,7 +40,7 @@ const routes: Routes = [
     canActivate: [authGuard],
   },
   {
-    path: 'transaction/edit/:id',
+    path: 'transaction/edit/:transactionType/:id',
     component: EditTransactionComponent,
     canActivate: [authGuard, roleGuard],
   },

@@ -78,11 +78,11 @@ export class MessagesService {
     setTimeout(() => this.clear(), 3000);
   }
 
-  public emitTransactionUpdatedMessage(httpCode: number, httpMessage: string) {
+  public emitTransactionUpdatedMessage() {
     this.messageSubject.next({
-      httpCode: httpCode,
+      httpCode: 201,
       messageTitle: 'REGISTRO ATUALIZADO',
-      httpMessage: httpMessage,
+      httpMessage: 'Registro atualizado com sucesso!',
     });
 
     setTimeout(() => this.clear(), 3000);
