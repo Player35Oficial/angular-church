@@ -1,12 +1,13 @@
 import { ChurchApiService } from 'src/app/services/church-api.service';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   faArrowCircleLeft,
   faHandHoldingDollar,
 } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from 'src/app/services/auth.service';
+import { MessagesService } from 'src/app/services/messages-service.service';
 
 @Component({
   selector: 'app-deposit',
@@ -43,16 +44,25 @@ export class DepositComponent {
     try {
       this.churchApiService
         .createTransaction(type_transaction, userId, value)
-        .subscribe();
+        .subscribe(() => {
+          this.router.navigate(['/home']);
+
+          this.messageService.emitCreateSuccessMessage(
+            201,
+            `${type_transaction.toUpperCase()}  Realizado com Sucesso`
+          );
+        });
     } catch (e) {
       console.log(e);
     }
   }
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private authService: AuthService,
-    private churchApiService: ChurchApiService
+    private churchApiService: ChurchApiService,
+    private messageService: MessagesService
   ) {
     this.route.params.subscribe((params) => {
       this.type = params['transactionType'];
