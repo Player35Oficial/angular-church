@@ -35,6 +35,7 @@ export class AuthService {
 
   clearAccessToken() {
     this.accessToken = null;
+    localStorage.clear();
   }
 
   decodeAccessToken(): any {
