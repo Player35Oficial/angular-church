@@ -175,6 +175,13 @@ table tbody tr:hover {
 }
 
 /* BUTTONS */
+button {
+  background-color: inherit;
+  border-style: none;
+  color: inherit;
+  font-size: inherit;
+}
+
 .btn {
   border-radius: var(--round-4, 4px);
   color: #fff;

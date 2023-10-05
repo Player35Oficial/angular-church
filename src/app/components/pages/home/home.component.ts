@@ -3,6 +3,7 @@ import {
   faFileInvoiceDollar,
   faHandHoldingDollar,
   faHandHoldingHeart,
+  faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

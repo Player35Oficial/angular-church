@@ -19,6 +19,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { DepositPopupComponent } from './components/popups/deposit-popup/deposit-popup.component';
 import { DeletePopupComponent } from './components/popups/delete-popup/delete-popup.component';
 import { EditPopupComponent } from './components/popups/edit-popup/edit-popup.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { EditPopupComponent } from './components/popups/edit-popup/edit-popup.co
     DepositPopupComponent,
     DeletePopupComponent,
     EditPopupComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

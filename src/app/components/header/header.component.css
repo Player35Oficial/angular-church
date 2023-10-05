@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  align-items: center;
+}
+
+.header .header-actions .action {
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.header .header-actions .action:hover {
+  background-color: var(--secondary);
+}
+
+.header .header-actions fa-icon {
+  color: #fff;
+  font-size: 3.2rem;
+}
