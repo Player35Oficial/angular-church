@@ -87,6 +87,11 @@ export class ChurchApiService {
 
     return this.http.delete<void>(url, { headers });
   }
+
+  createUser(body: IUSer) {
+    const url = `${this.baseApiUrl}/cadastrar`;
+    return this.http.post(url, body);
+  }
 }
 
 export interface ITransactions {
@@ -95,4 +100,11 @@ export interface ITransactions {
   id_tipos_transacao: string;
   valor: number;
   data: number;
+}
+
+interface IUSer {
+  nome: string;
+  email: string;
+  senha: string;
+  cargo: string;
 }

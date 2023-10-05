@@ -1,5 +1,8 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
+import { ChurchApiService } from 'src/app/services/church-api.service';
+import { Router } from '@angular/router';
+import { MessagesService } from 'src/app/services/messages-service.service';
 
 @Component({
   selector: 'app-sigup',
@@ -9,37 +12,51 @@ import { Component } from '@angular/core';
 export class SigupComponent {
   newUserForm!: FormGroup;
 
+  constructor(
+    private apiService: ChurchApiService,
+    private router: Router,
+    private messageService: MessagesService
+  ) {}
+
   ngOnInit(): void {
     this.newUserForm = new FormGroup({
-      username: new FormControl('', [Validators.required]),
+      nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
       email: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required]),
-      role: new FormControl('', [Validators.required]),
+      senha: new FormControl('', [Validators.required]),
+      cargo: new FormControl('', [Validators.required]),
     });
   }
 
-  get username() {
-    return this.newUserForm.get('username')!;
+  get nome() {
+    return this.newUserForm.get('nome')!;
   }
 
   get email() {
     return this.newUserForm.get('email')!;
   }
 
-  get password() {
-    return this.newUserForm.get('password')!;
+  get senha() {
+    return this.newUserForm.get('senha')!;
   }
 
-  get role() {
-    return this.newUserForm.get('role')!;
+  get cargo() {
+    return this.newUserForm.get('cargo')!;
   }
 
   submit() {
     if (this.newUserForm.invalid) {
-      console.log(this.newUserForm.errors);
+      console.log(this.newUserForm);
       return;
     }
-    console.log(this.newUserForm.value);
+    const body = this.newUserForm.value;
+
+    this.apiService.createUser(body).subscribe(() => {
+      this.router.navigate(['/login']);
+      this.messageService.emitCreateSuccessMessage(
+        201,
+        'Usuário criado com sucesso, faça login!'
+      );
+    });
     console.log('formulário enviado!');
   }
 }

@@ -76,7 +76,7 @@ body {
   outline-style: none;
 }
 
-.form-container form input[type="submit"] {
+.form-container form .submit {
   margin-top: 1.6rem;
   background-color: var(--primary-dark);
   color: #fff;
@@ -87,7 +87,7 @@ body {
   transition: 0.3s;
 }
 
-.form-container form input[type="submit"]:hover {
+.form-container form .submit:hover {
   cursor: pointer;
   background-color: var(--secondary);
 }

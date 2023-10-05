@@ -3,22 +3,20 @@
 
   <div class="form-container">
     <h2>Novo Usuário</h2>
-    <form (submit)="submit()" [formGroup]="newUserForm" #formDir="ngForm">
+    <form (ngSubmit)="submit()" [formGroup]="newUserForm" #formDir="ngForm">
       <div class="form-group">
         <label for="username">Nome:</label>
         <input
           type="text"
-          name="username"
+          name="nome"
           placeholder="John Doe"
           required
-          formControlName="username"
+          formControlName="nome"
+          minlength="3"
         />
-        <div
-          *ngIf="username.invalid && formDir.submitted"
-          class="validation-error"
-        >
-          <p *ngIf="username.errors?.['required']">O nome é obrigatório</p>
-          <p *ngIf="username.errors?.['minLength']">
+        <div *ngIf="nome.invalid && formDir.submitted" class="validation-error">
+          <p *ngIf="nome.errors?.['required']">O nome é obrigatório</p>
+          <p *ngIf="nome.errors?.['minLength']">
             O nome deve ter pelo menos 3 letras
           </p>
         </div>
@@ -32,27 +30,38 @@
           required
           formControlName="email"
         />
+        <div
+          *ngIf="email.invalid && formDir.submitted"
+          class="validation-error"
+        >
+          <p *ngIf="email.errors?.['required']">O email é obrigatório</p>
+          <p *ngIf="email.errors?.['minLength']">
+            O email deve ter pelo menos 3 letras
+          </p>
+        </div>
       </div>
       <div class="form-group">
         <label for="password">Senha:</label>
         <input
           type="password"
-          name="password"
-          placeholder="password"
+          name="senha"
+          placeholder="senha"
           required
-          formControlName="password"
+          formControlName="senha"
         />
       </div>
       <div class="form-group">
-        <label for="role">Cargo:</label>
-        <select name="role" id="role" formControlName="role">
-          <option value="" selected>-- Escolha --</option>
+        <label for="cargo">Cargo:</label>
+        <select name="cargo" id="cargo" formControlName="cargo">
+          <option value="" disabled selected>-- Escolha --</option>
           <option value="admin">Administrador</option>
           <option value="membro">Membro</option>
           <option value="tesoureiro">Tesoureiro</option>
         </select>
       </div>
-      <input type="submit" value="Cadastrar" />
+      <button class="submit" type="submit" [disabled]="newUserForm.invalid">
+        Cadastrar
+      </button>
     </form>
     <p>Já possui uma conta? <a routerLink="/login">Fazer Login</a></p>
   </div>
