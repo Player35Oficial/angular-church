@@ -51,8 +51,8 @@ export class EditTransactionComponent {
   }
 
   submit() {
-    console.log(this.editForm.value.value);
-    console.log(this.currentTransaction);
+    this.editForm.value.value;
+    this.currentTransaction;
     try {
       this.apiService
         .updateTransaction(
@@ -64,7 +64,7 @@ export class EditTransactionComponent {
       this.redirectToAll();
       this.messagesService.emitTransactionUpdatedMessage();
     } catch (error) {
-      console.log(error);
+      error;
     }
   }
 

@@ -33,14 +33,14 @@ export class DepositComponent {
 
   submit() {
     if (this.depositForm.invalid) {
-      console.log(this.depositForm.invalid);
+      this.depositForm.invalid;
       return;
     }
-    console.log(this.userId);
+    this.userId;
 
     const { type_transaction, value, userId }: ITransaction =
       this.depositForm.value;
-    console.log('Tipo de dado vindo do form: ' + typeof value);
+    'Tipo de dado vindo do form: ' + typeof value;
     try {
       this.churchApiService
         .createTransaction(type_transaction, userId, value)
@@ -53,7 +53,7 @@ export class DepositComponent {
           );
         });
     } catch (e) {
-      console.log(e);
+      e;
     }
   }
 

@@ -45,7 +45,7 @@ export class SigupComponent {
 
   submit() {
     if (this.newUserForm.invalid) {
-      console.log(this.newUserForm);
+      this.newUserForm;
       return;
     }
     const body = this.newUserForm.value;
@@ -57,6 +57,6 @@ export class SigupComponent {
         'Usuário criado com sucesso, faça login!'
       );
     });
-    console.log('formulário enviado!');
+    ('formulário enviado!');
   }
 }

@@ -49,13 +49,13 @@ export class SiginComponent {
         } else {
           console.error(response.body.errors);
         }
-        console.log(this.loginForm.value);
-        console.log('enviou formulário');
+        this.loginForm.value;
+        ('enviou formulário');
         this.messagesService.emitAuthenticatedMessage();
         this.router.navigate(['/home']);
       },
       (error) => {
-        console.log(error);
+        error;
         // http code
         const httpStatusCode = error.status;
         let errorMessage = '';
@@ -65,7 +65,6 @@ export class SiginComponent {
         } else {
           errorMessage = error.error.errors.body;
         }
-        console.log(httpStatusCode, errorMessage);
         this.messagesService.emitAuthCredentialshttpMessage(
           httpStatusCode,
           errorMessage

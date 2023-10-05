@@ -8,11 +8,11 @@ export class UserRoleService {
 
   setUserRole(role: string) {
     this.userRole = role;
-    console.log(this.userRole);
+    this.userRole;
   }
 
   public getUserRole(): string | null {
-    console.log(this.userRole);
+    this.userRole;
     return this.userRole;
   }
 }

@@ -31,7 +31,7 @@ export class ChurchApiService {
       .set('Content-Type', 'application/json')
       .set('authorization', `Bearer ${localStorage.getItem('access_token')}`);
 
-    console.log('Chamou');
+    ('Chamou');
     return this.http.post<ITransaction>(
       url,
       {
@@ -74,7 +74,7 @@ export class ChurchApiService {
       .set('Content-Type', 'application/json')
       .set('authorization', `Bearer ${localStorage.getItem('access_token')}`);
 
-    console.log(transactionType);
+    transactionType;
 
     return this.http.put<void>(url, body, { headers });
   }
