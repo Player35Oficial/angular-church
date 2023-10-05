@@ -4,7 +4,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Component } from '@angular/core';
 import { faMagnifyingGlassDollar } from '@fortawesome/free-solid-svg-icons';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import {
   ChurchApiService,
@@ -30,6 +30,7 @@ export class ViewTransactionComponent {
   transactionId!: string;
   transactionType!: string;
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private authService: AuthService,
     private apiService: ChurchApiService
@@ -54,5 +55,12 @@ export class ViewTransactionComponent {
     } else {
       this.isAdmin = false;
     }
+  }
+
+  deleteHandler() {
+    const id = Number(this.transactionId);
+    this.apiService.deleteTransactionById(id, this.transactionType).subscribe();
+
+    this.router.navigate(['/transaction/all']);
   }
 }

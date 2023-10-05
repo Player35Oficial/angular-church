@@ -78,6 +78,15 @@ export class ChurchApiService {
 
     return this.http.put<void>(url, body, { headers });
   }
+
+  deleteTransactionById(id: number, transactionType: string): Observable<void> {
+    const url = `${this.baseApiUrl}/transacao/${transactionType}/${id}`;
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('authorization', `Bearer ${localStorage.getItem('access_token')}`);
+
+    return this.http.delete<void>(url, { headers });
+  }
 }
 
 export interface ITransactions {

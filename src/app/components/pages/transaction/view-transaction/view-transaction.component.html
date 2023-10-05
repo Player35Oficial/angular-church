@@ -15,7 +15,7 @@
     <p><span>Data: </span>{{ transaction.data | date : "dd/MM/yyyy" }}</p>
     <p><span>Valor: </span>R$ {{ transaction.valor | number : "1.2" }}</p>
     <div *ngIf="isAdmin" class="actions">
-      <button class="btn btn-red">Excluir</button>
+      <button class="btn btn-red" (click)="deleteHandler()">Excluir</button>
       <button class="btn btn-edit">
         <a
           routerLink="/transaction/edit/{{ transactionType }}/{{
