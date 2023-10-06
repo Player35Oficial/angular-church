@@ -49,13 +49,11 @@ export class SiginComponent {
         } else {
           console.error(response.body.errors);
         }
-        this.loginForm.value;
-        ('enviou formulário');
+
         this.messagesService.emitAuthenticatedMessage();
         this.router.navigate(['/home']);
       },
       (error) => {
-        error;
         // http code
         const httpStatusCode = error.status;
         let errorMessage = '';

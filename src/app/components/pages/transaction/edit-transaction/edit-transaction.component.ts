@@ -64,7 +64,7 @@ export class EditTransactionComponent {
       this.redirectToAll();
       this.messagesService.emitTransactionUpdatedMessage();
     } catch (error) {
-      error;
+      console.log(error);
     }
   }
 

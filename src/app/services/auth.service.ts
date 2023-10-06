@@ -15,7 +15,6 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     if (this.accessToken) {
-      this.accessToken;
       return true;
     } else {
       return false;

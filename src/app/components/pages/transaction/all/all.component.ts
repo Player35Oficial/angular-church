@@ -23,7 +23,6 @@ export class AllComponent {
     this.apiService.getAllTransactions().subscribe((data) => {
       data.forEach((item) => this.transactions.push(item));
     });
-    this.transactions;
   }
 }
 

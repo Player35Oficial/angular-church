@@ -40,7 +40,6 @@ export class DepositComponent {
 
     const { type_transaction, value, userId }: ITransaction =
       this.depositForm.value;
-    'Tipo de dado vindo do form: ' + typeof value;
     try {
       this.churchApiService
         .createTransaction(type_transaction, userId, value)
@@ -53,7 +52,7 @@ export class DepositComponent {
           );
         });
     } catch (e) {
-      e;
+      console.log(e);
     }
   }
 

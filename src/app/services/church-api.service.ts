@@ -74,8 +74,6 @@ export class ChurchApiService {
       .set('Content-Type', 'application/json')
       .set('authorization', `Bearer ${localStorage.getItem('access_token')}`);
 
-    transactionType;
-
     return this.http.put<void>(url, body, { headers });
   }
 
