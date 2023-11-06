@@ -4,32 +4,51 @@
   [iconNavigateBack]="faArrowBack"
   labelNavigateBack="Voltar"
 ></app-navigation>
-
 <div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th>Tipo</th>
-        <th>Valor</th>
-        <th>Data</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let transaction of transactions">
-        <td>{{ transaction.id_tipos_transacao | titlecase }}</td>
-        <td>
-          R$ {{ transaction.valor | number : "1.2" }}
-          <button>
-            <a
-              routerLink="/transaction/view/{{
-                transaction.id_tipos_transacao
-              }}/{{ transaction.id }}"
-              >Ver Detalhes</a
-            >
-          </button>
-        </td>
-        <td>{{ transaction.data | date : "dd/MM/yy" }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <mat-table
+    mat-table
+    [dataSource]="transactions"
+    class="mat-elevation-z8"
+    [style.border-radius.px]="10"
+  >
+    <ng-container matColumnDef="id_tipos_transacao">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let transaction">
+        {{ transaction.id_tipos_transacao | titlecase }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="valor">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let transaction">
+        R$ {{ transaction.valor | number : "1.2" }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="data">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>Data</mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let transaction">
+        {{ transaction.data | date : "dd/MM/yy" }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let transaction">
+        <button>
+          <a
+            routerLink="/transaction/view/{{
+              transaction.id_tipos_transacao
+            }}/{{ transaction.id }}"
+            >Ver Detalhes</a
+          >
+        </button>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row
+      mat-header-row
+      *matHeaderRowDef="['id_tipos_transacao', 'valor', 'data', 'actions']"
+    ></mat-header-row>
+    <mat-row
+      mat-row
+      *matRowDef="let transaction; columns: displayedColumns"
+    ></mat-row>
+  </mat-table>
 </div>

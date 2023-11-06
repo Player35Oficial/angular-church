@@ -1,12 +1,15 @@
-nav {
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   height: 4.8rem;
+  z-index: 1;
+  background-color: transparent;
+  margin-top: 3.6rem;
 }
 
-nav .nav-button {
+.nav .nav-button {
   position: absolute;
   left: 3.2rem;
   background-color: var(--white-primary);
@@ -15,16 +18,16 @@ nav .nav-button {
   transition: 0.3s;
 }
 
-nav .nav-button:hover {
+.nav .nav-button:hover {
   background-color: var(--secondary);
 }
 
-nav .nav-button:hover a,
-nav .nav-button:hover fa-icon {
+.nav .nav-button:hover a,
+.nav .nav-button:hover fa-icon {
   color: #fff;
 }
 
-nav .nav-button a {
+.nav .nav-button a {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -34,7 +37,7 @@ nav .nav-button a {
   transition: 0.4s;
 }
 
-nav .nav-button fa-icon {
+.nav .nav-button fa-icon {
   display: flex;
   font-size: 4.8rem;
   color: var(--primary-dark);
@@ -46,12 +49,17 @@ h2 {
   justify-content: center;
   gap: 1.6rem;
   align-items: center;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 h2 fa-icon {
   position: relative;
   color: var(--primary);
   font-size: 3.8rem;
+  display: flex;
+  align-items: center;
 }
 
 h2 .icon-container {

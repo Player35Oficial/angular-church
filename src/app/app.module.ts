@@ -20,6 +20,9 @@ import { DepositPopupComponent } from './components/popups/deposit-popup/deposit
 import { DeletePopupComponent } from './components/popups/delete-popup/delete-popup.component';
 import { EditPopupComponent } from './components/popups/edit-popup/edit-popup.component';
 import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './materials/material.module';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,8 @@ import { HeaderComponent } from './components/header/header.component';
         allowedDomains: ['http://localhost:3333'],
       },
     }),
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [MessagesComponent, DepositPopupComponent],
   bootstrap: [AppComponent],

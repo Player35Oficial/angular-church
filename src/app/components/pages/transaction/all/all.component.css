@@ -7,3 +7,84 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* MAT-TABLES */
+
+table,
+mat-table {
+  width: 100%;
+  color: #fff;
+}
+
+mat-table mat-header-row,
+mat-table mat-row {
+  background-color: var(--dark-home-bg);
+}
+
+mat-table mat-header-cell {
+  background-color: var(--primary-dark);
+  color: #fff;
+}
+
+mat-table mat-cell {
+  background-color: var(--primary);
+}
+
+mat-table mat-header-cell:nth-child(1) {
+  border-radius: 0.8rem 0 0 0;
+}
+mat-table mat-header-cell:nth-child(4) {
+  border-radius: 0 0.8rem 0 0;
+}
+
+mat-table mat-row:last-child mat-cell:nth-child(1) {
+  border-radius: 0 0 0 0.8rem;
+}
+
+mat-table mat-row:last-child mat-cell:nth-child(4) {
+  border-radius: 0 0 0.8rem 0;
+}
+
+mat-table mat-header-cell:nth-child(1),
+mat-table mat-header-cell:nth-child(2),
+mat-table mat-header-cell:nth-child(3),
+mat-table mat-row mat-cell:nth-child(1),
+mat-table mat-row mat-cell:nth-child(2),
+mat-table mat-row mat-cell:nth-child(3) {
+  border-right: 1px solid #a3a3a3;
+}
+
+table tbody tr,
+mat-table mat-row {
+  color: #fff;
+}
+
+mat-table mat-row:nth-child(4) {
+  text-align: center;
+}
+
+mat-table mat-row:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-table mat-row button {
+  padding: 0.4rem 1.6rem;
+  border-radius: 0.4rem;
+  background-color: var(--secondary);
+  color: #fff;
+  font-weight: 500;
+  border-style: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+mat-table mat-row button:hover {
+  background-color: #604bb9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

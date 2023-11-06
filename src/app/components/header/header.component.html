@@ -1,9 +1,18 @@
-<header class="header" *ngIf="!isLoginPage() && !isSignUpPage()">
-  <h1>API REST - CHURCH</h1>
+<mat-toolbar
+  class="header"
+  color="primary"
+  *ngIf="!isLoginPage() && !isSignUpPage()"
+>
+  <h1 class="mat-h1">API REST - CHURCH</h1>
   <div class="header-actions">
-    <button (click)="logout()" aria-label="Encerrar Sessão" class="action">
+    <button
+      matTooltip="Sair"
+      (click)="logout()"
+      aria-label="Encerrar Sessão"
+      class="action"
+    >
       <fa-icon [icon]="faLogout"> </fa-icon>
       <!-- <span>Sair</span> -->
     </button>
   </div>
-</header>
+</mat-toolbar>
