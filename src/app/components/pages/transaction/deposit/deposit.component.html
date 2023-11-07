@@ -28,13 +28,16 @@
       />
       <div class="form-group">
         <label for="value"><span>No valor de:</span></label>
-        <input
-          formControlName="value"
-          type="number"
-          name="value"
-          placeholder="R$ 10,00"
-          required
-        />
+        <mat-form-field>
+          <input
+            formControlName="value"
+            matInput
+            type="number"
+            placeholder="10.00"
+            required
+          />
+          <span matTextPrefix>R$&nbsp;</span>
+        </mat-form-field>
       </div>
       <input type="submit" value="Enviar" />
     </form>

@@ -9,6 +9,10 @@ h2 {
   gap: 0;
 }
 
+span {
+  font-size: 1.6rem;
+}
+
 h2 fa-icon {
   position: relative;
   color: var(--primary);
@@ -30,6 +34,7 @@ h2 fa-icon::before {
 .main section {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 1.6rem;
   padding: 1.6rem;
   color: #000;
@@ -40,11 +45,14 @@ h2 fa-icon::before {
 
 .main section p {
   width: 16rem;
+  font-size: 1.8rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .form-group {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1.6rem;
 }
@@ -52,6 +60,7 @@ h2 fa-icon::before {
 form {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
@@ -71,4 +80,12 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
   cursor: pointer;
   background-color: var(--secondary);
+}
+
+form input {
+  font-size: 1.6rem;
+}
+
+mat-form-field span {
+  font-size: 1.6rem;
 }

@@ -4,6 +4,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   exports: [
@@ -12,6 +14,8 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatTooltipModule,
     MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   declarations: [],
   providers: [],

@@ -10,6 +10,7 @@
     [dataSource]="transactions"
     class="mat-elevation-z8"
     [style.border-radius.px]="10"
+    *ngIf="transactions.length > 0; else notFound"
   >
     <ng-container matColumnDef="id_tipos_transacao">
       <mat-header-cell mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
@@ -52,3 +53,6 @@
     ></mat-row>
   </mat-table>
 </div>
+<ng-template #notFound>
+  <p class="notFound">Nenhum registro foi encontrado!</p>
+</ng-template>

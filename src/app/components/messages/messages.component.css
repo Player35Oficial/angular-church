@@ -10,6 +10,11 @@
   animation: open 0.8s;
 }
 
+h4,
+p {
+  margin-bottom: 0;
+}
+
 .message .message-header {
   text-align: center;
   padding: 0.8rem 0;
